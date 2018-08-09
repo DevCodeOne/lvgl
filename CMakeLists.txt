@@ -4,7 +4,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_compile_options(-Wall -Wextra -Wpedantic -Wno-psabi -g)
 
-file(GLOB SRC_FILES src/*/*.c)
+file(GLOB SRC_FILES src/*.c src/*/*.c src/*/*/*.c)
 add_library(lvgl ${SRC_FILES})
 
 target_include_directories(lvgl PUBLIC src/lv_core)
